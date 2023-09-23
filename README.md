@@ -1,4 +1,4 @@
-# RecycleView
+# RecyclerView
 # StoryApp
 
 Welcome to StoryTeller, where captivating stories come to life with just a click. Immerse yourself in a world of imagination, intrigue, and inspiration as you embark on literary journeys crafted by talented storytellers from around the globe.
