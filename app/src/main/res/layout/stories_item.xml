@@ -45,7 +45,7 @@
             android:layout_marginTop="4dp"
             android:lines="2"
             android:textSize="16sp"
-            android:text="During the whole of a dull..."
+            android:text="@string/during_the_whole_of_a_dull"
             app:layout_constraintEnd_toEndOf="@+id/title"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/title"

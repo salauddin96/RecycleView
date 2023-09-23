@@ -9,11 +9,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import de.hdodenhof.circleimageview.CircleImageView
 
-class StoryAdapter (private val storyList:List<StoryModel>, private val clickListener:(StoryModel)->Unit):RecyclerView.Adapter<MyviewHolder>(){
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyviewHolder {
+class StoryAdapter (private val storyList:List<StoryModel>, private val clickListener:(StoryModel)->Unit):RecyclerView.Adapter<MyViewHolder>(){
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val storyItem = layoutInflater.inflate(R.layout.stories_item, parent, false)
-        return MyviewHolder(storyItem)
+        return MyViewHolder(storyItem)
     }
 
     override fun getItemCount(): Int {
@@ -21,7 +21,7 @@ class StoryAdapter (private val storyList:List<StoryModel>, private val clickLis
 
     }
 
-    override fun onBindViewHolder(holder: MyviewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val story = storyList[position]
         holder.bind(story,clickListener)
 
@@ -30,7 +30,7 @@ class StoryAdapter (private val storyList:List<StoryModel>, private val clickLis
 
 }
 
-class MyviewHolder(val view:View):RecyclerView.ViewHolder(view) {
+class MyViewHolder(private val view:View):RecyclerView.ViewHolder(view) {
     fun bind(story:StoryModel, clickListener: (StoryModel) -> Unit){
         val title = view.findViewById<TextView>(R.id.title)
         val details = view.findViewById<TextView>(R.id.storyDetail)
